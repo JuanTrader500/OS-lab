@@ -1,6 +1,12 @@
-# Practica 1
+## 1. Datos
+- Nombre:Juan Andres Muñoz Zapata
+- Código:"No pondre mi cdigo ya que el repo sera publico se envia por chat privado"
+- Usuario de GitHub:Visita [My github](https://github.com/JuanTrader500) 
 
-## Mi entorno (Tabla 1)
+
+## Practica 1
+
+### Mi entorno (Tabla 1)
 
 | Dato | Hardware físico | Lo que ve Linux / WSL2 |
 |---|---|---|
@@ -24,16 +30,17 @@ los 12 hilos del procesador y casi toda la RAM (7,4 GiB de los 8 GiB instalados)
 Mi kernel usa cgroups v2 (`cgroup2fs`), igual que pide la guía. Algunas cosas son distintas a lo que describe
 la guía para WSL2: mi swap no es 0B (tengo 7,4 GiB), el kernel no termina en `microsoft-standard-WSL2` y mi disco es btrfs en vez de ext4.
 
-# Practica 2
 
-## Captura del paso 2 
+## Practica 2
+
+### Captura del paso 2 
 
 ![captura](/capturas/practica2_paso2.png)
 
-## Captura del paso 3
+### Captura del paso 3
 
 ![captura](/capturas/practica2_paso3.png)
 
-## Captura del paso 4
+### Captura del paso 4
 
 ![captura](/capturas/practica2_paso4.png)
