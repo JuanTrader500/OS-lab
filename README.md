@@ -31,6 +31,8 @@ Mi kernel usa cgroups v2 (`cgroup2fs`), igual que pide la guía. Algunas cosas s
 la guía para WSL2: mi swap no es 0B (tengo 7,4 GiB), el kernel no termina en `microsoft-standard-WSL2` y mi disco es btrfs en vez de ext4.
 
 
+#Evidencias ejecucion de las practicas.
+
 ## Practica 2
 
 ### Captura del paso 2 
@@ -44,3 +46,39 @@ la guía para WSL2: mi swap no es 0B (tengo 7,4 GiB), el kernel no termina en `m
 ### Captura del paso 4
 
 ![captura](/capturas/practica2_paso4.png)
+
+## Practica 3
+
+
+![captura](/capturas/practica3.png)
+
+## Practica 4
+![captura](/capturas/practica4.1.png)
+
+![captura](/capturas/practica4.2.png)
+
+
+
+
+
+# Tabla 7 — Predicción vs. realidad (Prácticas 3 a 6)
+
+"Diferencia" = medido − predicho.
+
+| Prueba | Predicho (calculos.py o guía) | Medido | Diferencia | ¿Por qué? |
+|---|---|---|---|---|
+| `ratio_wall/cpu` con 1 petición | ≈ 4 | 3.89 | −0.11 | Con `cpu.max = 25000 100000` el kernel deja trabajar a la API 25 ms de cada 100 ms y la pausa los otros 75 ms, así que el mismo trabajo tarda unas 4 veces más. La diferencia es ruido normal de medición. |
+| `ratio_wall/cpu` con 2 peticiones | ≈ 8 | 7.72 y 7.92 | −0.28 y −0.08 | Las dos peticiones se turnan la misma cuota de 25 ms por ciclo, así que cada una tarda el doble que sola. El contador `nr_throttled` subió de 165 a 229 (+64) durante la prueba. |
+| Memoria base de la API | 20 MiB | _pendiente (P4)_ | | |
+| Llamada a `/ram` que dispara el OOM | 4.ª | _pendiente (P4)_ | | |
+| Exit code tras el OOM | 137 | _pendiente (P4)_ | | |
+| Descriptores con N = 50 | 105 | _pendiente (P5)_ | | |
+| Descriptores con N = 100 | 205 | _pendiente (P5)_ | | |
+| Máximo de peticiones simultáneas | 125 | _pendiente (P5)_ | | |
+| Tiempo de `docker stop` con SIGTERM | ≈ 3 s | _pendiente (P6)_ | | |
+| Exit code con SIGTERM | 0 | _pendiente (P6)_ | | |
+| Tiempo de `docker stop` con SIGKILL | ≈ 10 s | _pendiente (P6)_ | | |
+| Exit code con SIGKILL | 137 | _pendiente (P6)_ | | |
+
+
+
