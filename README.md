@@ -30,6 +30,7 @@ los 12 hilos del procesador y casi toda la RAM (7,4 GiB de los 8 GiB instalados)
 Mi kernel usa cgroups v2 (`cgroup2fs`), igual que pide la guía. Algunas cosas son distintas a lo que describe
 la guía para WSL2: mi swap no es 0B (tengo 7,4 GiB), el kernel no termina en `microsoft-standard-WSL2` y mi disco es btrfs en vez de ext4.
 
+![captura](/capturas/practica1.png)
 
 #Evidencias ejecucion de las practicas.
 
